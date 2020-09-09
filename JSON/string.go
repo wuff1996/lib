@@ -1,4 +1,4 @@
-package goJSON
+package json
 
 import (
 	"strings"
