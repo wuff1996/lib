@@ -2,6 +2,7 @@ package others
 
 import (
 	"fmt"
+	"github.com/sirupsen/logrus"
 )
 
 var NormalErr = fmt.Errorf("EOF")
@@ -26,12 +27,10 @@ func FindKey(s, key string) (string, error) {
 		if v == int32(key[index]) {
 			if index == len(key)-1 {
 				key := i + 3
-				if  err := plusRule(fs[key], fs[i+3]); err != NormalErr{
-					log.
-				}
 				t += string(fs[key])
-				for err := plusRule(fs[key], fs[i+3]); err == NormalErr; i++ {
+				for !plusRule(fs[key], fs[i+3]) {
 					t += string(fs[i+4])
+					i++
 				}
 				return t, nil
 			}
@@ -43,9 +42,9 @@ func FindKey(s, key string) (string, error) {
 	return "", fmt.Errorf(fmt.Sprintf("no %s in %s", key, s))
 }
 
-func PlusRule() func(rune, rune) error {
+func PlusRule() func(rune, rune) bool {
 	count := 0
-	return func(s, n rune) error {
+	return func(s, n rune) bool {
 		var head rune
 		var tail rune
 		if s == []rune("[")[0] {
@@ -53,7 +52,8 @@ func PlusRule() func(rune, rune) error {
 		} else if s == []rune("{" )[0] {
 			head, tail = []rune("{" )[0], []rune("}" )[0]
 		} else {
-			return fmt.Errorf("set key: only { or [ is permmited,what you put is %s", string(s))
+			logrus.Fatal(fmt.Errorf("findKey: set key: only { or [ is permmited,what i get is %s", string(s)))
+			return false
 		}
 		if n == head {
 			count++
@@ -62,8 +62,8 @@ func PlusRule() func(rune, rune) error {
 			count--
 		}
 		if count != 0 {
-			return fmt.Errorf("EOF")
+			return false
 		}
-		return nil
+		return true
 	}
 }

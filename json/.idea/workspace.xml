@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c306b954-b5ef-45c8-b172-d255826c7762" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/string.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/others/root.go" beforeDir="false" afterPath="$PROJECT_DIR$/others/root.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/string/string.go" beforeDir="false" afterPath="$PROJECT_DIR$/string/string.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +40,24 @@
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../wuff/code/test" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
+  </component>
+  <component name="RunManager">
+    <configuration name="go build github.com/wuff1996/lib/json" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="json" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="github.com/wuff1996/lib/json" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build github.com/wuff1996/lib/json" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -44,5 +65,36 @@
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GOPROXY" value="https://goproxy.cn" />
+      </map>
+    </environment>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="334" key="FileChooserDialogImpl" timestamp="1600390269854">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="740" y="334" key="FileChooserDialogImpl/0.0.1920.1160@0.0.1920.1160" timestamp="1600390269854" />
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom" timestamp="1600392790311">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1600392790311" />
+    <state width="1877" height="158" key="GridCell.Tab.0.center" timestamp="1600392790311">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1600392790311" />
+    <state width="1877" height="158" key="GridCell.Tab.0.left" timestamp="1600392790311">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1600392790311" />
+    <state width="1877" height="158" key="GridCell.Tab.0.right" timestamp="1600392790311">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state width="1877" height="158" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1600392790311" />
+    <state x="461" y="224" key="SettingsEditor" timestamp="1600389716177">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="461" y="224" key="SettingsEditor/0.0.1920.1160@0.0.1920.1160" timestamp="1600389716177" />
   </component>
 </project>
