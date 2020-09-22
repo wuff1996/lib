@@ -2,7 +2,7 @@ package others
 
 import (
 	"fmt"
-	"github.com/sirupsen/logrus"
+	log "github.com/sirupsen/logrus"
 )
 
 var NormalErr = fmt.Errorf("EOF")
@@ -26,6 +26,10 @@ func FindKey(s, key string) (string, error) {
 	for i, v := range fs {
 		if v == int32(key[index]) {
 			if index == len(key)-1 {
+				if fs[i-len(key)] != []rune("\"")[0] || fs[i+2] != []rune(":")[0] {
+					index = 0
+					continue
+				}
 				key := i + 3
 				t += string(fs[key])
 				for !plusRule(fs[key], fs[i+3]) {
@@ -52,8 +56,8 @@ func PlusRule() func(rune, rune) bool {
 		} else if s == []rune("{" )[0] {
 			head, tail = []rune("{" )[0], []rune("}" )[0]
 		} else {
-			logrus.Fatal(fmt.Errorf("findKey: set key: only { or [ is permmited,what i get is %s", string(s)))
-			return false
+			log.Error(fmt.Errorf("findKey: set key: only { or [ is permmited,what i get is %s", string(s)))
+			count = 0
 		}
 		if n == head {
 			count++
