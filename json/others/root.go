@@ -2,7 +2,6 @@ package others
 
 import (
 	"fmt"
-	log "github.com/sirupsen/logrus"
 )
 
 var NormalErr = fmt.Errorf("EOF")
@@ -51,18 +50,19 @@ func PlusRule() func(rune, rune) bool {
 	return func(s, n rune) bool {
 		var head rune
 		var tail rune
-		if s == []rune("[")[0] {
+		switch s {
+		case []rune("[")[0]:
 			head, tail = []rune("[")[0], []rune("]")[0]
-		} else if s == []rune("{" )[0] {
+		case []rune("{")[0]:
 			head, tail = []rune("{" )[0], []rune("}" )[0]
-		} else {
-			log.Error(fmt.Errorf("findKey: set key: only { or [ is permmited,what i get is %s", string(s)))
+		default:
 			count = 0
 		}
-		if n == head {
+
+		switch n {
+		case head:
 			count++
-		}
-		if n == tail {
+		case tail:
 			count--
 		}
 		if count != 0 {
